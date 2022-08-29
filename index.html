@@ -60,10 +60,27 @@
                       <a class="px-5" href="#">Log In</a>
                     </div>
                     <!-- login button here -->
-                    <input class="py-3 px-2 bg-buttongreen 
+                    <input class="hidden md:block py-3 px-2 bg-buttongreen 
                     rounded-lg font-bold text-white hover:bg-hovergreen" type="button" value="Try For Free">
                   </div>
+                  <!-- mobile button goes here -->
+                <div class="md:hidden flex item-center">
+                  <button class="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                  </button>            
                 </div>
+                </div>
+                <!-- mobile menu goes here -->
+            <div class="mobile-menu bg-offwhite hidden text-center">
+              <a class="py-4 uppercase hover:text-white hover:bg-buttongreen block" href="#">start</a>
+              <a class="py-4 uppercase hover:text-white hover:bg-buttongreen block" href="#">sell</a>
+              <a class="py-4 uppercase hover:text-white hover:bg-buttongreen block" href="#">markets</a>
+              <a class="py-4 uppercase hover:text-white hover:bg-buttongreen block" href="#">manage</a>
+              <a class="py-4 uppercase hover:text-white hover:bg-buttongreen block" href="#">pricing</a>
+              <a class="py-4 uppercase hover:text-white hover:bg-buttongreen block" href="#">learn</a>
+            </div>
             </nav>
             <!-- Hero section -->
             <div class="flex flex-col justify-between pl-4 pt-10 md:flex-row mx-auto">
@@ -544,5 +561,15 @@
           </div>
         </footer>
     </main>
+    <script>
+      // for click button
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+    
+      // add event listner
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
 </body>
 </html>
